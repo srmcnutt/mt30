@@ -46,13 +46,9 @@ def post_gif_to_webex(gif):
     }
     payload = {
     "roomId" : f"{WEBEX_ROOM}",
-    "html" : f'{gif}' 
+    "html" : f"<p>Here's a ren and stimpy image of (probably) a shiny red button!</p></br> {gif}" 
   }
 
-    # payload = {
-    # "roomId" : "Y2lzY29zcGFyazovL3VzL1JPT00vNTkwOTJkOTAtY2FiMC0xMWVhLTk1NDUtODFlMDQ3YTJiMWY2",
-    # "text" : "hi from Postman"
-    # }
 
     response = requests.request("POST", url, headers=headers, json=payload)
     print(payload)
